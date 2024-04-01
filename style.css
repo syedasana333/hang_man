@@ -1,0 +1,208 @@
+/* || RESETTING CSS STYLES */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* || COLORS */
+    --COLOR-PRIMARY: #483198;
+    --COLOR-SECONDARY: #A492E3;
+    --COLOR-RED: #DB6F6F;
+    --COLOR-WHITE: #fff;
+    --COLOR-BG: rgb(30, 15, 83, .8);
+
+    /* || FONT STYLES */
+    --FF-PRIMARY: kavoon;
+    --FF: inter;
+    --FS-S: 1.125rem;
+    --FS: 1.4rem;
+    --FS-L: 1.8rem;
+    --FS-XL: 2rem;
+    --FW-M: 400;
+    --FW-B: 700;
+}
+
+
+/* || GENERAL STYLES */
+
+body{
+    font-family: var(--FF-PRIMARY);
+    background: var(--COLOR-PRIMARY);
+    color: var(--COLOR-WHITE);
+    min-height: 100vh;
+}
+
+
+/* || HEADER SECTION */
+
+.header-section,
+.nav-items,
+.hero-section,
+.heart,
+.life-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14vh;
+    padding: 0 5%;
+    gap: 12px;
+}
+
+.nav-items{
+    gap: 22px;
+    padding: 22px;
+}
+
+.nav-items button,
+.play-btn{
+    font-family: inherit;
+    background-color: var(--COLOR-WHITE);
+    padding: 6px 36px;
+    border: none;
+    font-size: var(--FS);
+    border-radius: 70px;
+    cursor: pointer;
+}
+
+.life-line{
+    background: var(--COLOR-WHITE);
+    border-radius: 20px;
+    width: 200px;
+    height: 18px;
+}
+
+.life{
+    background: var(--COLOR-RED);
+    border-radius: 10px;
+    width: 188px;
+    height: 8px;
+}
+
+.tooltip{
+    font-family: var(--FF);
+    font-size: var(--FS-S);
+    background: var(--COLOR-SECONDARY);
+    color: var(--COLOR-WHITE);
+    padding: 4px 14px;
+    border-radius: 5px;
+    /* border: 2px solid green; */
+}
+
+.pin{
+    margin: 0 auto;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid var(--COLOR-SECONDARY);
+    width: 12px;
+}
+
+.hint{
+    position: relative;
+}
+
+.tooltip-container{
+    display: none;
+    position: absolute;
+    bottom: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* || MAIN SECTION */
+
+.hero-section{
+    height: 86vh;
+    padding: 0 12%;
+}
+
+.hero-section img{
+    height: clamp(200px, 75%, 500px);
+}
+
+.letter,
+.word{
+    background: var(--COLOR-WHITE);
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letters,
+.words{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    color: var(--COLOR-PRIMARY);
+}
+
+.word{
+    height: 65px;
+    width: 65px;
+    background: var(--COLOR-SECONDARY);
+    color: var(--COLOR-WHITE);
+    font-weight: var(--FW-B);
+    font-size: var(--FS-L);
+    border-radius: 18px;
+}
+
+.letter{
+    cursor: pointer;
+}
+
+.words{
+    margin-bottom: 10%;
+}
+
+.words-container{
+    width: 60%;
+    font-family: var(--FF);
+    font-weight: var(--FW-M);
+    font-size: var(--FS);
+}
+
+
+/* BANNER */
+
+.banner-bg{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: var(--COLOR-BG);
+    z-index: 1;
+}
+
+.result-banner{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 38%;
+    background: var(--COLOR-PRIMARY);
+    border-radius: 32px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    padding: 45px 36px;
+    z-index: 2;
+}
+
+.play-btn{
+    height: 55px;
+    width: 100%;
+}
+
+.result{
+    font-size: var(--FS-XL);
+}
+
